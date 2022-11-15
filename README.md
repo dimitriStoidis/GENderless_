@@ -15,12 +15,9 @@ Privacy-preserving Speech Recognition. Gender of the speaker is protected while 
 
 Clone the repository in current folder
 
-NVIDIA GTX-1050 FOR THE INITIAL EXPERIMENTS AND RTX 2070 FOR THE FINAL EXPERIMENTS 
-ON THE SPEECH-GEN.
-
 
 ### TO INSTALL DEEPSPEECH2:
-FOLLOW THE INSTRUCTIONS IN https://github.com/SeanNaren/deepspeech.pytorch 
+Follow the instructions from https://github.com/SeanNaren/deepspeech.pytorch 
 
 IN THE CURRENT DIRECTORY CLONE THE DEEPSPEECH.PYTORCH REPOSITORY AND RUN THE SCRIPT
 librispeech.py TO DOWNLOAD THE DATASET IN THE SUBDIRECTORY FORMAT SPECIFIED
@@ -34,20 +31,20 @@ SPECIFY THE DIRECTORY AND THE MODEL (.PTH) YOU WISH TO LOAD.
 TO RUN A TEST ON THE FINAL SPEECH-GEN MODEL TYPE:
 
 ```
-python test_AE_DeepSpeech.py --batch 5 --layers 5 --filters 64 --num_workers 1 --model models/librispeech_pretrained.pth --verbose --cuda 
+`python test_AE_DeepSpeech.py --batch 5 --layers 5 --filters 64 --num_workers 1 --model models/librispeech_pretrained.pth --verbose --cuda`
 ```
 
 ### SUBDIRECTORIES
 			
-IN THIS FOLDER YOU SHOULD FIND THE FOLLOWING SUBDIRECTORIES:
+Create the following data structure:
 - \SCRIPTS
 - \DATA
 - \MODELS
 
 #### \ SCRIPTS 
 
-CONTAINS THE SCRIPTS WE HAVE CONTRIBUTED. THESE ARE BASED 
-ON THE IMPLEMENTATION OF DEEPSPEECH2 IN THE WAY DATA IS READ AND PREPROCESSED.
+Contains the contributed scripts.
+
 ```
 classes_gen.py
 ```
@@ -58,7 +55,7 @@ AUTOENCODERS, CNNS AND DEEPSPEECH, USED IN THE TRAINING AND TESTING.
 CONTAINS THE IMPLEMENTATION OF THE GUARDIAN FOR TRAINING 
 	
 ```train_gen.py```
-CONTAINS THE IMPLEMENTATION FOR THE GENDER CLASSIFICATION NETWORK TRAINING.
+Use for gender classification.
 
 ```test_gen.py``` 
 CONTAINS THE CODE FOR TESTING THE GENDER CLASSIFICATION ACCURACY.
